@@ -1,0 +1,50 @@
+﻿@{
+    string _classSearch = Session["idEventList"] == null ? "search" : "filterListEventsProducts";
+}
+<div class="ui container fluid _header">
+    <div class="ui container">
+        <div class="ui middle aligned three column centered grid">
+            
+            <div class="row">
+
+                <div class="ui eight wide mobile six wide tablet three wide computer column">
+                    <a href="/Home" title="Página Inicial">
+                        <img class="ui middle aligned image logo" src="/assets/image/logo/logo.png?123" alt="@LojaCorp.Control.Company._Company.FantasyName" title="@LojaCorp.Control.Company._Company.FantasyName">
+                    </a>
+                </div>
+
+                @Html.Action("Menu", "Home")
+
+                <div class="ui five wide mobile six wide tablet eleven wide computer column">
+                    
+                    <div class="ui aligned four wide tablet two wide computer column searchcolumn" style="position: absolute; margin-top: -70px !important; right: 0px;">
+                        <div class="ui category @_classSearch">
+                            <div class="ui icon input fluid">
+                                <input class="prompt" type="text" placeholder="Buscar...">
+                                <i class="search icon"></i>
+                            </div>
+                            <div class="results"></div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Searchbar -->
+                    <div class="ui searchMobile mobile only">
+                        <div class="ui button icon centered">
+                            <i class="search icon" style="color: #FFFFFF;"></i>
+                        </div>
+                        <div class="ui blocoBusca @_classSearch">
+                            <div class="ui icon input fluid">
+                                <input class="prompt" type="text" placeholder="Buscar...">
+                                <i class="search icon"></i>
+                            </div>
+                            <div class="results"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
